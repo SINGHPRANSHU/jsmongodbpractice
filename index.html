@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <script type="text/javascript">
+  // function fn(){
+  //   var str=document.getElementById("text1");
+  //   alert(str); 
+    function t(){
+      //  return false;
+      var str=document.getElementById("text1").value;
+      var regx=/E{5}/;
+      if(str.trim()=="")
+     { str.style.border="solid 3px red"
+       return false;
+     }
+       else if ( regx.test(str))
+    {
+      return true;
+    }
+       else
+       return false;
+    }
+  
+  </script>
+  <link rel="stylesheet" href="css/my.css">
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+  </head>
+  <body>
+   
+    <br />
+    <button onclick="fn()" id="btn1">click me</button>
+    
+    <form onsubmit="return t()" action="m.html">
+      <input id="text1" type="text" placeholder="anything" />
+      <br>
+      <button type="submit">submit</button>
+    </form>
+    <div id="div"></div>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+  <script>
+// $(document).ready(function (){
+// $("#text1").
+// });
+
+$("div").datepicker({
+  changeYear:true,
+  changeMonth:true,minDate:new Date(2017,0,1),
+  maxDate:new Date(2020,0,1)
+});
+  </script>
+</html>
